@@ -5,7 +5,7 @@ threadEx</h1>
 
 <h2>
 
-[🚀Live Site]() || devjhex
+[🚀Live Site](https://threadex.netlify.app/) || devjhex
 
 </h2>
 </div>
