@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/7666dfc9fb.js" crossorigin="anonymous" defer></script>
+    <title>threadEx</title>
+</head>
+
+<body> 
+    <header class="border-b w-full sticky top-0 left-0 bg-white">
+        <h1 class="font-serif text-[1.8rem] md:text-[2rem] lg:text-[2.5rem] p-2 font-bold text-center">thread<span class="text-blue-600">Ex</span></h1>
+    </header>
+
+    <main class="threadEx">
+        <section>
+            <h1 class="font-serif text-center text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] font-bold p-2 md:p-4 mg:p-8">"A <span class="text-blue-500">Twitter</span> Thread Builder"</h1>
+            <p class="text-center md:max-w-[800px] mx-auto text-[1.2rem] md:text-[1.5rem] font-sans text-slate-700 p-2 pb-6 md:p-8 lg:p-9">Use this tool to easily make Twitter threads from long captions. Choose a separator that we automatically split into threads.</p>
+
+            <textarea name="textInput" id="textInput"  placeholder="Paste or write your Twitter caption here..." class="outline-none overflow-hidden font-sans md:text-[1.3rem] min-h-[300px] border border-slate-700 rounded-[.3rem] w-11/12 md:max-w-[830px] block text-wrap mx-auto resize-none p-2 md:p-3 lg:p-5 placeholder:text-slate-500 placeholder:font-sans"></textarea>
+
+            <section class="w-11/12 md:max-w-[830px] mx-auto">
+                <div>
+
+                <span class="pt-4 block font-sans">Split into threads By:</span>
+            
+                <div class="flex flex-col gap-[1rem]">
+
+                    <select name="separator" id="separatorMenu" class="block w-full mt-2 mx-auto md:max-[830px] md:text-[1.3rem] text-center p-2 border border-slate-700 rounded-[.3rem] font-sans cursor-pointer">
+                        <option value="two-spaces">Two spaces</option>
+                        <option value="three-spaces">Three spaces</option>
+                        <option value="new-line">New line</option>
+                        <option value="...">...</option>
+                        <option value="[]">[]</option>
+                        <option value="⚡">⚡</option>
+                        <option value="false">Choose Custom operator</option>
+                        </select>
+        
+                        <input type="text" id="customInput" class="hidden w-full mt-2 mx-auto md:max-[830px] md:text-[1.3rem] border border-slate-700 rounded-[.3rem] font-sans p-2" placeholder="Enter your custom separator, for example : ###">
+                </div>
+                </div>
+
+                <div class="mt-4 flex items-center justify-between sticky bottom-4">
+                    <button class="bg-blue-500 w-8/12 md:w-9/12 p-4 md:p-6 rounded-full font-bold text-white md:text-[1.3rem] uppercase generateThreadBtn">Make Threads</button>
+                    <button class="bg-black w-[100px] h-[40px] rounded-[.5rem] p-2 font-bold text-white deleteThreads"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </section>
+
+            <section class="generated-threads w-11/12 md:max-w-[830px] mx-auto p-2 mt-4 flex flex-col gap-[1rem]">
+            </section>
+
+            <section class="w-11/12 md:max-w-[830px] mx-auto mt-8 p-2 md:p-4 mg:p-8">
+                <h1 class="font-serif text-center md:text-left text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] font-bold "><span class="text-blue-500">How</span> to make Twitter Threads ?</h1>
+
+                <ol class="p-2 md:p-4 rounded-[.5rem] md:ml-8 flex flex-col gap-[.3rem]">
+                    <li class="before:content-['1'] relative before:absolute before:right-full flex items-start sm:items-center  bg-before:text-white before:mr-1 before:bg-blue-500 before:w-[20px] before:h-[20px] before:flex before:items-center before:justify-center before:rounded-full">Paste a twitter caption in the text area above.</li>
+                    <li class="before:content-['2'] relative before:absolute before:right-full flex items-start bg-before:text-white before:mr-1 before:bg-blue-500 before:w-[20px] before:h-[20px] before:flex before:items-center before:justify-center before:rounded-full">Choose a seperator so we know where to split the threads.</li>
+                    <li class="before:content-['3'] relative before:absolute before:right-full flex items-start bg-before:text-white before:mr-1 before:bg-blue-500 before:w-[20px] before:h-[20px] before:flex before:items-center before:justify-center before:rounded-full">Hit the "Make Threads" Button.</li>
+                    <li class="before:content-['4'] relative before:absolute before:right-full flex items-start bg-before:text-white before:mr-1 before:bg-blue-500 before:w-[20px] before:h-[20px] before:flex before:items-center before:justify-center before:rounded-full">Click "Tweet" on the first thread.</li>
+                    <li class="before:content-['5'] relative before:absolute before:right-full flex items-start bg-before:text-white before:mr-1 before:bg-blue-500 before:w-[20px] before:h-[20px] before:flex before:items-center before:justify-center before:rounded-full">In Twitter, click "+" to add another thread.</li>
+                    <li class="before:content-['6'] relative before:absolute before:right-full flex items-start bg-before:text-white before:mr-1 before:bg-blue-500 before:w-[20px] before:h-[20px] before:flex before:items-center before:justify-center before:rounded-full">Copy each thread from here into a new thread in Twitter.</li>
+                    <li class="before:content-['7'] relative before:absolute before:right-full flex items-start bg-before:text-white before:mr-1 before:bg-blue-500 before:w-[20px] before:h-[20px] before:flex before:items-center before:justify-center before:rounded-full">A blue tick <span class="flex px-2 self-center fa-solid fa-check text-blue-500"></span> will be shown after copying a thread .</li>
+                </ol>
+            </section>
+
+            <section class="w-11/12 md:max-w-[830px] mx-auto mt-8 p-2 sm:p-4 lg:p-8">
+                <h1 class="font-serif text-center md:text-left text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] font-bold"><span class="text-blue-500">Frequently</span> Asked questions</h1>
+
+                <div class="mt-2 sm:mt-4 md:mt-8 flex flex-col gap-[1rem]">
+                    <details class="border border-slate-300 rounded-[.3rem] p-2 sm:p-4  flex flex-col hover:bg-slate-200 cursor-pointer md:text-[1.2rem]">
+                        <summary class="text-center font-bold">
+                            What is a Twitter thread?
+                        </summary>
+                        <p class="text-center my-4 font-medium">
+                            A Twitter thread is just a tweet split into multiple tweets as the max character limit for Twitter is 290 characters. Creating a Twitter thread is the perfect way to do longer Twitter posts.
+                        </p>
+                    </details>
+                    <details class="border border-slate-300 rounded-[.3rem] p-2 sm:p-4 flex flex-col hover:bg-slate-200 cursor-pointer md:text-[1.2rem]">
+
+                        <summary class="text-center font-bold">
+                            Why should I make Twitter threads here and not in Twitter?
+                        </summary>
+                        <p class="text-center my-4 font-medium">
+                            Twitter thread interface can be tricky to split a single long tweet into multiple threads so this tool just makes it easy and being able to do it by any custom character makes it much faster.
+                        </p>
+                    </details>
+                </div>
+                
+                
+
+            </section>
+            <section class="w-11/12 md:max-w-[830px] mx-auto mt-8 p-2 sm:p-4 lg:p-8">
+                <h1 class="font-serif text-center md:text-left text-[1.6rem] md:text-[2.5rem] lg:text-[3rem] font-bold"><span class="text-blue-500">More</span> Tools to come.</h1>
+            </section>
+        </section>
+    </main>
+    <script src="./src/main.js" type="module"></script>
+</body>
+</html>
